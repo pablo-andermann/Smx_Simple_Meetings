@@ -451,10 +451,13 @@ class Meeting extends Account implements \Smx\SimpleMeetings\Interfaces\Meeting
      */
     public function getAttendeeList(){
         if(!is_null($this->meetingKey)){
-            $attendee = new Attendee($this->getUsername(), $this->getPassword(),
-                    $this->getSitename(), array(
-                        'meetingKey' => $this->meetingKey
-                    ));
+            $attendee = new Attendee(array(
+                'username' => $this->getUsername(),
+                'password' => $this->getPassword(),
+                'sitename' => $this->getSitename()
+            ), array(
+                'meetingKey' => $this->meetingKey
+            ));
             return $attendee->getAttendeeList();
         } else {
             $this->error = 'Meeting must be scheduled before you can pull a 
