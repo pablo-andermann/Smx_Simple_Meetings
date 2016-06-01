@@ -1,5 +1,5 @@
 {
-    "name": "smx/simplemeetings-Drupal",
+    "name": "smx/simplemeetings-drupal",
     "description": "Simple and abstracted library for integrating with web meetings providers such as WebEx and Citrix (for Drupal).",
     "type": "library",
     "keywords": [
